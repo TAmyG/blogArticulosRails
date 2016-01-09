@@ -3,8 +3,12 @@ html,body{
 	font-family: 'Open Sans', sans-serif;
 }
 
+.red{
+	color: #E74C3C !important;
+}
+
+
 a,a:visited{
-	color: inherit !important;
 	text-decoration: none
 
 }
@@ -27,6 +31,7 @@ a,a:visited{
 	margin: 0px;
 }
 
+
 .be-red{
 	background-color: #E74C3C;
 }
@@ -45,6 +50,10 @@ a,a:visited{
 
 .top-space{
 	margin-top: 1em;
+}
+
+.text-lef{
+	text-align: left;
 }
 
 .form-control{

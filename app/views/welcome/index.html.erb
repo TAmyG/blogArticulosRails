@@ -1,2 +1,4 @@
-<h1>Bienvenidos al blog en Rails</h1>
+<%if user_signed_in?%>
+	<h1>Bienvenidos <%= current_user.email%></h1>
+<%end%>
 

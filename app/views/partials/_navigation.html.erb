@@ -1,0 +1,36 @@
+<header>
+	<nav class = "be-red white large-padding">
+		<ul class = "no-list row center-xs">
+			<li class= "col-xs">
+				<h1 class="no-margin" id="logo">Blog Rails</h1>
+			</li>
+			<li class= "col-xs">
+				<%= link_to "Inicio", root_path%>
+			</li>
+			<li class= "col-xs">
+				Tiempo
+			</li>
+			<li class= "col-xs">
+				Tecnologia
+			</li>
+			<li class= "col-xs">
+				Progra
+			</li>
+			<% if user_signed_in?%>
+				<li class= "col-xs">
+					<%= link_to "Logout", destroy_user_session_path, method: :delete%>
+				</li>
+			<%else%>
+				<li class= "col-xs">
+					<%= link_to "Login", new_user_session_path%>
+				</li>
+
+				<li class= "col-xs">
+					<%= link_to "Crear Cuenta", new_user_registration_path%>
+				</li>
+			<%end%>
+		</ul>	
+	</nav>
+</header>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
