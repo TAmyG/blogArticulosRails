@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
 
   resources :articles do
-    resources :comments  
+    resources :comments, only: [:create, :destroy, :update] 
   end
 
   devise_for :users
