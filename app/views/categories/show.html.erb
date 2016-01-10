@@ -1,13 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h1 style ="color: <%= @category.color%>;">
   <%= @category.name %>
-</p>
+</h1>
 
 <p>
-  <strong>Color:</strong>
-  <%= @category.color %>
+	<% @category.articles.each do |article|%>
+		<h3><%=link_to article.title, article%></h3>
+		<p>Visitas: <%= article.visits_count%></p>
+		<div>
+			<%= article.body%> - <%= link_to "Eliminar", article, method: :delete, class: "red"%>
+		</div>
+	<%end %>
 </p>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
