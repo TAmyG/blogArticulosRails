@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  
+
+  resources :articles do
+    resources :comments  
+  end
+
   devise_for :users
   #get 'welcome/index'
   #get 'especial', to: 'welcome#index'
 
-  resources :articles
+
 =begin
     get '/articles'             index
     get '/articles:id'          show
