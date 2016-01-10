@@ -9,8 +9,7 @@ html,body{
 
 
 a,a:visited{
-	text-decoration: none
-
+	text-decoration: none;
 }
 
 .btn{
@@ -27,13 +26,17 @@ a,a:visited{
 	font-size: 1.2em;
 }
 
+.no-list{
+	list-style-type: none;
+}
+
 .no-margin{
 	margin: 0px;
 }
 
 
 .be-red{
-	background-color: #E74C3C;
+	background-color: #E74C3C ;
 }
 
 .white{

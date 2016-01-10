@@ -1,21 +1,23 @@
 <header>
 	<nav class = "be-red white large-padding">
 		<ul class = "no-list row center-xs">
-			<li class= "col-xs">
-				<h1 class="no-margin" id="logo">Blog Rails</h1>
+			<li class= "col-xs white">
+				<h1 class="no-margin" id="logo"><%= link_to "Blog Rils", root_path%></h1>
 			</li>
 			<li class= "col-xs">
-				<%= link_to "Inicio", root_path%>
+				<%= link_to "Articulos", articles_path%>
+				
 			</li>
-			<li class= "col-xs">
-				Tiempo
-			</li>
-			<li class= "col-xs">
-				Tecnologia
-			</li>
-			<li class= "col-xs">
-				Progra
-			</li>
+
+			<% @categories.each do |category| %>
+
+				<li class= "col-xs">
+					<%= link_to category.name, category%>
+				
+				</li>
+
+			<%end%>			
+
 			<% if user_signed_in?%>
 				<li class= "col-xs">
 					<%= link_to "Logout", destroy_user_session_path, method: :delete%>
