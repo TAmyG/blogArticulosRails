@@ -1,7 +1,10 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :set_comment, only: [:update, :destroy]
   before_action :set_article
   before_action :authenticate_user!
+=begin no se requieren rutas individuales para los comments
+únicamente cuando se crea se modifica o se destruye
+
   # GET /comments
   # GET /comments.json
   def index
@@ -21,6 +24,7 @@ class CommentsController < ApplicationController
   # GET /comments/1/edit
   def edit
   end
+=end
 
   # POST /comments
   # POST /comments.json
