@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160110233033) do
+ActiveRecord::Schema.define(version: 20160113015055) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160110233033) do
     t.integer  "cover_file_size"
     t.datetime "cover_updated_at"
     t.string   "state",              default: "in_draft"
+    t.text     "markup_body"
   end
 
   add_index "articles", ["user_id"], name: "index_articles_on_user_id"
