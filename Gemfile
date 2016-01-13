@@ -31,6 +31,8 @@ gem 'paperclip', '~> 4.2.1'
 
 gem 'aasm'
 
+gem 'will_paginate', '~> 3.0.7'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
